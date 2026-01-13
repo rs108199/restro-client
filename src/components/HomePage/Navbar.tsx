@@ -9,7 +9,7 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="z-20 w-full max-w-[1420px] mx-auto">
+        <nav className="z-20 w-full max-w-[1420px] mx-auto ">
             <div className="mx-auto mx-8 flex items-center justify-between px-6 py-6 uls:mx-0">
                 <div className="flex justify-around">
                     {/* Logo */}

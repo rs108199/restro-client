@@ -1,6 +1,5 @@
 import Navbar from '@/src/components/HomePage/Navbar'
 import { Play } from 'lucide-react'
-import React from 'react'
 
 export default function HomePage() {
     return (

@@ -7,38 +7,67 @@ import LoginPage from "../LoginPage/page";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [destDropDown, setDestDropDown] = useState(false);
 
     return (
-        <nav className="z-20 w-full max-w-[1420px] mx-auto ">
-            <div className="mx-auto mx-8 flex items-center justify-between px-6 py-6 uls:mx-0">
-                <div className="flex justify-around">
-                    {/* Logo */}
-                    <div className="text-white font-serif text-lg tracking-wide">
-                        <img src="nav_logo.png" alt="" width={"80%"} />
+        <>
+
+
+            <div className="z-20 w-full max-w-360 mx-auto ">
+                <div className="mx-auto flex items-center justify-between px-6 py-6 uls:mx-0">
+                    <div className="flex justify-around">
+                        {/* Logo */}
+                        <div className="text-white font-serif text-lg tracking-wide">
+                            <img src="nav_logo.png" alt="" width={"80%"} />
+                        </div>
+
+                        {/* Links */}
+                        <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest text-white/90 mx-4">
+                            <div onClick={() => setDestDropDown(x => !x)} className="rounded-full border px-5 py-2 text-xs uppercase hover:bg-white hover:text-black transition">Destinations</div>
+                            <Link href="#">About Us</Link>
+                            <Link href="#">Contact Us</Link>
+                        </div>
+
                     </div>
 
-                    {/* Links */}
-                    <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest text-white/90 mx-4">
-                        <Link href="#">Destinations</Link>
-                        <Link href="#">About Us</Link>
-                        <Link href="#">Contact Us</Link>
-                    </div>
+                    <button
+                        onClick={() => setIsOpen(true)}
+                        className="rounded-full border bg-[#F1E8D5] px-5 py-2 text-xs uppercase tracking-wider text-black hover:bg-white hover:text-black transition">
+                        Login / Join
+                    </button>
 
                 </div>
 
+                {
+                destDropDown &&
+                <div className="mx-5 border border-solid bg-white py-2 rounded-xl">
+                    <div className="w-full grid grid-cols-[1fr_1fr_1fr_1fr]">
+                        <DestCard/>
+                        <DestCard/>
+                        <DestCard/>
+                        <DestCard/>
+                        
+                    </div>
+                </div>
+            }
 
-                {/* CTA */}
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="rounded-full border bg-[#F1E8D5] px-5 py-2 text-xs uppercase tracking-wider text-black hover:bg-white hover:text-black transition">
-                    Login / Join
-                </button>
-
+                <LoginModal isOpen={isOpen} setIsOpen={setIsOpen}>
+                    <LoginPage />
+                </LoginModal>
             </div>
+            
+        </>
 
-            <LoginModal isOpen={isOpen} setIsOpen={setIsOpen}>
-                <LoginPage />
-            </LoginModal>
-        </nav>
     );
+}
+
+
+function DestCard() {
+    return(<>
+        <div className="flex justify-center">
+            <img src="goa.jpg" alt="" />
+        </div>
+    </>)
+    
+
 }

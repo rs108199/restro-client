@@ -26,7 +26,7 @@ function SwiperCar() {
                 slidesPerView={'auto'}
                 coverflowEffect={{
           rotate: 0,
-          stretch: 0,
+          stretch: 60,
           depth: 100,
           modifier: 2.5,
         }}
@@ -40,13 +40,16 @@ function SwiperCar() {
         className="swiper_container"
             >
                 <SwiperSlide>
-                    <img src={data[0].image} alt="slide_image" />
+                      <div className="slide-img"><img src={data[0].image} alt="slide_image"/></div>
+                    
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={data[1].image} alt="slide_image" />
+                    {/* <img src={data[1].image} alt="slide_image" /> */}
+                     <div className="slide-img"><img src={data[1].image} alt="slide_image"/></div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src={data[2].image} alt="slide_image" />
+                    {/* <img src={data[2].image} alt="slide_image" /> */}
+                     <div className="slide-img"><img src={data[2].image} alt="slide_image"/></div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <img src={data[0].image} alt="slide_image" />

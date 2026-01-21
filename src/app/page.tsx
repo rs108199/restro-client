@@ -1,5 +1,4 @@
 import MyCarousel from "../components/CenteredCarousel";
-import Destination from "../components/Destination";
 import Footer from "../components/Footer";
 import HomePage from "../components/HomePage";
 
@@ -14,7 +13,7 @@ export default function Home() {
         </div>
         
       </div>
-      <Destination/>
+
       <Footer/>
     </>
   );

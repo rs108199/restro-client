@@ -1,13 +1,12 @@
 import { ArrowDownToLine } from 'lucide-react'
-import React from 'react'
 
-function Destination() {
+function DestMenuBar() {
     return (
         <div className='bg-black text-white px-[7%] min-h-[700px]'>
             <div className=' text-[64px] font-[400] pb-14'>Our Destinations</div>
             <div>
-                <div className='mb-6 flex justify-between border-b border-solid border-b-[2px] border-b-white py-2'>
-                    <div className='text-[44px] font-[900]'>Jaipur</div>
+                <div className='mb-6 flex justify-between border-b border-solid border-b border-b-white py-2'>
+                    <div className='text-[40px] font-[900]'>Jaipur</div>
                     <div className='flex items-center'>
                         <div className='mx-8'>View Menu </div>
                         <div className=''><ArrowDownToLine /></div>
@@ -35,4 +34,4 @@ function Destination() {
     )
 }
 
-export default Destination
+export default DestMenuBar

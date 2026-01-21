@@ -12,10 +12,10 @@ export default function LoginPage() {
   };
 
   return (
-    <main className="min-h-75 flex items-center justify-center px-4">
+    <main className="min-h-75 flex items-center justify-center px-4 ">
       <section
         aria-labelledby="login-heading"
-        className="w-full max-w-md bg-white rounded-md shadow-md p-8"
+        className="w-full bg-white rounded-md shadow-md p-8 bg-linear-to-b from-[#F1E8D5] to-[#FFFFFF]"
       >
         {/* Heading */}
         <h1

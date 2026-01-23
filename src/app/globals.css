@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Instrument+Serif:ital@0;1&display=swap');
 
 @import "tailwindcss";
 
 @theme {
   /* Fonts */
   --font-montserrat: "Montserrat", sans-serif;
+  --font-cinzel : "Cinzel", sans-serif;
+  --font-instr_serif : "Instrument Serif", sans-serif;
+
 
   /* Colors */
   --color-brand: #4f46e5;

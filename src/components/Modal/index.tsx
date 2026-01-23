@@ -17,7 +17,7 @@ export default function LoginModal({ children, isOpen, setIsOpen }: { children: 
 
 
                 <div className="fixed inset-0 flex items-center justify-center">
-                    <DialogPanel className="w-full max-w-md rounded-xl bg-white shadow-xl">
+                    <DialogPanel className="w-full max-w-md shadow-xl">
                         {/* <button
                             onClick={() => setIsOpen(false)}
                             className="mb-4 text-sm text-gray-500 hover:text-black"

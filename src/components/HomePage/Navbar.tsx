@@ -4,10 +4,13 @@ import Link from "next/link";
 import { useState } from "react";
 import LoginModal from "../Modal";
 import LoginPage from "../LoginPage/page";
+import { ChevronDown, ChevronUp } from "lucide-react";
+import RegistrationPage from "../LoginPage/Registration";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [destDropDown, setDestDropDown] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
 
     return (
         <>
@@ -23,9 +26,14 @@ export default function Navbar() {
 
                         {/* Links */}
                         <div className="hidden md:flex items-center gap-8 text-sm uppercase tracking-widest text-white/90 mx-4">
-                            <div onClick={() => setDestDropDown(x => !x)} className="rounded-full border px-5 py-2 text-xs uppercase hover:bg-white hover:text-black transition">Destinations</div>
-                            <Link href="#">About Us</Link>
-                            <Link href="#">Contact Us</Link>
+                            <div onClick={() => setDestDropDown(x => !x)} className="flex items-center px-5 py-2 text-xs uppercase transition">
+                                <div className="flex"><div className="flex items-center">Destinations
+                                    </div > {!destDropDown ? <ChevronDown /> : <ChevronUp />}
+                                
+                                </div>
+                                </div>
+                            <Link href="#" className="flex items-center">About Us</Link>
+                            <Link href="#" className="flex items-center">Contact Us</Link>
                         </div>
 
                     </div>
@@ -52,7 +60,7 @@ export default function Navbar() {
             }
 
                 <LoginModal isOpen={isOpen} setIsOpen={setIsOpen}>
-                    <LoginPage />
+                    {showLogin ? <LoginPage setShowLogin={setShowLogin}/> : <RegistrationPage setShowLogin={setShowLogin}/>}
                 </LoginModal>
             </div>
             

@@ -4,10 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import LoginModal from "../Modal";
 import LoginPage from "../LoginPage/page";
+import RegistrationPage from "../LoginPage/Registration";
 
 export default function DestNavbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [destDropDown, setDestDropDown] = useState(false);
+    const [showLogin, setShowLogin] = useState(true);
 
     return (
         <>
@@ -57,7 +59,7 @@ export default function DestNavbar() {
                 }
 
                 <LoginModal isOpen={isOpen} setIsOpen={setIsOpen}>
-                    <LoginPage />
+                    {showLogin ? <LoginPage setShowLogin={setShowLogin}/> : <RegistrationPage setShowLogin={setShowLogin}/>}
                 </LoginModal>
             </div>
 

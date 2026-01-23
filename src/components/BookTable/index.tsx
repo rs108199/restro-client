@@ -8,7 +8,7 @@ function BookTable() {
 
             <div className="absolute top-0 h-full w-full flex justify-center items-center ">
                 <div className='mx-[7%] w-full max-w-360 flex justify-center'>
-                    <div className='w-111.25 text-white text-center' style={{border: "1px solid white"}}>
+                    <div className='w-150 text-white rounded-2' >
                         <DiningReservationForm/>
                     </div>
                     <div className="flex items-center justify-center md:justify-center">

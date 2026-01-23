@@ -3,8 +3,9 @@
 import { EyeOff } from "lucide-react";
 import { useState } from "react";
 
-export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) => void}) {
+export default function RegistrationPage({setShowLogin}: {setShowLogin : (x: boolean) => void}) {
   const [email, setEmail] = useState("");
+  const [mobileNo, setMobileNo] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -23,7 +24,7 @@ export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) =
           id="login-heading"
           className="text-[22px] text-center my-6 font-instr_serif"
         >
-          Welcome to The Imperial Sanctuary
+          An exclusive circle awaits. Join in now
         </h1>
 
         <form
@@ -38,10 +39,29 @@ export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) =
           {/* Username / Email */}
           <div>
             <label
+              htmlFor="mobileNo"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Mobile
+            </label>
+            <input
+              id="mobile"
+              name="mobileNo"
+              type="text"
+              autoComplete="mobileNo"
+              required
+              value={mobileNo}
+              onChange={(e) => setMobileNo(e.target.value)}
+              className="mt-1 w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
+            />
+          </div>
+
+           <div>
+            <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              Email or Mobile
+              Email
             </label>
             <input
               id="email"
@@ -54,7 +74,6 @@ export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) =
               className="mt-1 w-full px-4 py-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"
             />
           </div>
-
           {/* Password */}
           <div className="my-4">
             <label
@@ -92,17 +111,20 @@ export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) =
             aria-disabled="true"
             className="my-4 w-full bg-[black] text-white py-3 rounded-[24px]  focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
           >
-            Log In
+            Continue
           </button>
 
           
           
         </form>
-          <div className="text-center my-5">
-            Forget Password
-          </div>
-          <span className="text-[14px] mb-6">Don’t have an account yet? Join <span className="underline cursor-pointer" onClick={() => setShowLogin(false)}>The Imperial Sanctuary</span>
-</span>
+          <div className="flex justify-center">
+
+          
+          <div>
+
+          
+          <span className="text-[14px] mb-6">Already have an account? <span className="underline cursor-pointer" onClick={() => setShowLogin(true)}> Login</span>
+</span></div></div>
 <div className="mb-6"/>
         {/* <nav
           className="flex justify-between mt-6 text-sm"

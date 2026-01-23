@@ -1,0 +1,31 @@
+.category-lists-carousel {
+  display: contents;
+}
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid black; */
+  height: auto
+}
+
+/* .single-carousel-category {
+  background-color: rgb(226, 59, 59);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  margin-bottom: 25px;
+  border-radius: 35px;
+  height: 65px;
+  font-size: 13px;
+  width: 250px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} */
+
+.single-carousel-category:hover {
+  background-color: #206cd6;
+  color: white;
+}

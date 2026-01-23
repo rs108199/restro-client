@@ -7,13 +7,10 @@ export default function Home() {
   return (
     <>
       <HomePage />
-      
-      <div className="bg-black flex justify-center p-10 min-h-25">
-        <CoverflowCarousel/>
-        
+      <div className="bg-black py-20 min-h-25">
+        <CoverflowCarousel />
       </div>
-
-      <Footer/>
+      <Footer />
     </>
   );
 }

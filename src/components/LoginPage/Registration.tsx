@@ -3,7 +3,11 @@
 import { EyeOff } from "lucide-react";
 import { useState } from "react";
 
-export default function RegistrationPage({setShowLogin}: {setShowLogin : (x: boolean) => void}) {
+export default function RegistrationPage({
+  setShowLogin,
+}: {
+  setShowLogin: (x: boolean) => void;
+}) {
   const [email, setEmail] = useState("");
   const [mobileNo, setMobileNo] = useState("");
   const [password, setPassword] = useState("");
@@ -56,7 +60,7 @@ export default function RegistrationPage({setShowLogin}: {setShowLogin : (x: boo
             />
           </div>
 
-           <div>
+          <div>
             <label
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
@@ -95,12 +99,10 @@ export default function RegistrationPage({setShowLogin}: {setShowLogin : (x: boo
           </div>
           <div className="flex justify-end">
             <div className="flex text-right">
-            <div className="text-[14px] mr-2">Show Password </div>
-            <EyeOff />
+              <div className="text-[14px] mr-2">Show Password </div>
+              <EyeOff />
+            </div>
           </div>
-          </div>
-          
-          
 
           {/* Human Verification (Accessible Mock) */}
 
@@ -113,19 +115,21 @@ export default function RegistrationPage({setShowLogin}: {setShowLogin : (x: boo
           >
             Continue
           </button>
-
-          
-          
         </form>
-          <div className="flex justify-center">
-
-          
+        <div className="flex justify-center">
           <div>
-
-          
-          <span className="text-[14px] mb-6">Already have an account? <span className="underline cursor-pointer" onClick={() => setShowLogin(true)}> Login</span>
-</span></div></div>
-<div className="mb-6"/>
+            <span className="text-[14px] mb-6">
+              Already have an account?{" "}
+              <span
+                className="underline cursor-pointer"
+                onClick={() => setShowLogin(true)}
+              >
+                 Login
+              </span>
+            </span>
+          </div>
+        </div>
+        <div className="mb-6" />
         {/* <nav
           className="flex justify-between mt-6 text-sm"
           aria-label="Authentication links"
@@ -147,6 +151,3 @@ export default function RegistrationPage({setShowLogin}: {setShowLogin : (x: boo
     </main>
   );
 }
-
-
-

@@ -3,7 +3,11 @@
 import { EyeOff } from "lucide-react";
 import { useState } from "react";
 
-export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) => void}) {
+export default function LoginPage({
+  setShowLogin,
+}: {
+  setShowLogin: (x: boolean) => void;
+}) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -76,12 +80,10 @@ export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) =
           </div>
           <div className="flex justify-end">
             <div className="flex text-right">
-            <div className="text-[14px] mr-2">Show Password </div>
-            <EyeOff />
+              <div className="text-[14px] mr-2">Show Password </div>
+              <EyeOff />
+            </div>
           </div>
-          </div>
-          
-          
 
           {/* Human Verification (Accessible Mock) */}
 
@@ -94,16 +96,18 @@ export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) =
           >
             Log In
           </button>
-
-          
-          
         </form>
-          <div className="text-center my-5">
-            Forget Password
-          </div>
-          <span className="text-[14px] mb-6">Don’t have an account yet? Join <span className="underline cursor-pointer" onClick={() => setShowLogin(false)}>The Imperial Sanctuary</span>
-</span>
-<div className="mb-6"/>
+        <div className="text-center my-5">Forget Password</div>
+        <span className="text-[14px] mb-6">
+          Don’t have an account yet? Join{" "}
+          <span
+            className="underline cursor-pointer"
+            onClick={() => setShowLogin(false)}
+          >
+            The Imperial Sanctuary
+          </span>
+        </span>
+        <div className="mb-6" />
         {/* <nav
           className="flex justify-between mt-6 text-sm"
           aria-label="Authentication links"
@@ -125,6 +129,3 @@ export default function LoginPage({setShowLogin}: {setShowLogin : (x: boolean) =
     </main>
   );
 }
-
-
-

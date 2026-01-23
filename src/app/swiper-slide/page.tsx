@@ -1,12 +1,12 @@
-import CoverflowCarousel from "@/src/components/CenteredCarousel/Coverflow"
-import SwiperCar from "@/src/components/CenteredCarousel/SwiperSlide"
+import CoverflowCarousel from "@/src/components/CenteredCarousel/Coverflow";
+import SwiperCar from "@/src/components/CenteredCarousel/SwiperSlide";
 
 function page() {
   return (
     <>
-    <CoverflowCarousel/>
+      <CoverflowCarousel />
     </>
-  )
+  );
 }
 
-export default page
+export default page;
